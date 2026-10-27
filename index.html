@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+</head>
+<style>
+  /* Body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  padding-top: 60px;
+}
+
+/* Navbar - Fixed */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  height: 60px;
+  z-index: 1000;
+}
+
+.navbar a.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 14px;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  background-color: #4CAF50;
+  border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  background-color: #222;
+  color: white;
+  padding: 100px 10% 80px 10%;
+}
+
+.hero-text {
+  width: 60%;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  color: #4CAF50;
+  font-size: 24px;
+}
+
+.hero-text p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.hero-img {
+  width: 40%;
+  text-align: center;
+}
+
+.hero-img img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  border: 5px solid #4CAF50;
+}
+
+/* Button */
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Section Common */
+.section {
+  padding: 70px 10%;
+  background-color: white;
+}
+
+.section.light {
+  background-color: #f9f9f9;
+}
+
+.section.dark {
+  background-color: #333;
+  color: white;
+}
+
+.heading {
+  text-align: center;
+  font-size: 34px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.heading.white {
+  color: white;
+}
+
+/* Row - FOR STRAIGHT LINE */
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* About Cards - Attractive */
+.card {
+  background-color: white;
+  width: 32%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-top: 5px solid #4CAF50;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  color: #4CAF50;
+  margin-top: 0;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Skills Box - Attractive */
+.skill-box {
+  background-color: white;
+  width: 32%;
+  padding: 25px;
+  border-left: 6px solid #4CAF50;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.skill-box:hover {
+  background-color: #f0fff0;
+}
+
+.skill-box h3 {
+  color: #333;
+}
+
+/* Projects - Attractive */
+.project-card {
+  background-color: white;
+  width: 48%;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  border-bottom: 5px solid #333;
+}
+
+.project-card:hover {
+  border-bottom: 5px solid #4CAF50;
+  transform: translateY(-5px);
+}
+
+.link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Contact Section - Center */
+.contact-section {
+  background-color: #333;
+  padding: 70px 10%;
+  text-align: center;
+}
+
+.contact-heading {
+  color: white;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form in Middle */
+.contact-form-center {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form-center input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.contact-form-center textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  height: 120px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.contact-form-center .button {
+  width: 160px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form-center .button:hover {
+  background-color: #45a049;
+}
+
+/* Mobile */
+@media screen and (max-width: 700px) {
+  .contact-form-center {
+    width: 100%;
+  }
+}
+
+/* Footer - Attractive */
+.footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 40px 10%;
+}
+
+.footer h3 {
+  color: #4CAF50;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid #4CAF50;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.footer-links a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.copyright {
+  color: #888;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-text {
+    width: 100%;
+  }
+  .hero-img {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .skill-box {
+    width: 100%;
+  }
+  .project-card {
+    width: 100%;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-form {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+  <a href="#home" class="logo">Portfolio</a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- Home / Hero -->
+<div id="home" class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm Shobit Gupta</h1>
+    <h2>Software Engineer</h2>
+    <p>BCA Graduate from MITS School of Biotechnology, Bhubaneswar (2023-2026). I build web apps using MERN stack.</p>
+    <a href="#projects" class="button">View My Projects</a>
+  </div>
+  <div class="hero-img">
+    <img src="shobit.jpg" alt="profile">
+  </div>
+</div>
+
+<!-- About -->
+<div id="about" class="section">
+  <h2 class="heading">About Me</h2>
+  <div class="row">
+    <div class="card">
+      <h3>🎓 Education</h3>
+      <p>10th from Buxi Jagabandhu English Medium School</p>
+      <p>Diploma from CV Raman Global University</p>
+      <p>BCA from MITS, Bhubaneswar 2023-2026</p>
+    </div>
+    <div class="card">
+      <h3>🎯 Career Objective</h3>
+      <p>To get a challenging role as an Agentic AI Engineer where I can build autonomous AI systems.</p>
+    </div>
+    <div class="card">
+      <h3>💡 Interests</h3>
+      <p>Software Development, Agentic AI, Web Development, Cycling, Travelling</p>
+    </div>
+  </div>
+</div>
+
+<!-- Skills -->
+<div id="skills" class="section light">
+  <h2 class="heading">My Skills</h2>
+  <div class="row">
+    <div class="skill-box">
+      <h3>💻 Programming</h3>
+      <p>JavaScript, Java, Python</p>
+    </div>
+    <div class="skill-box">
+      <h3>🌐 Web Development</h3>
+      <p>HTML, CSS, JavaScript, Express</p>
+    </div>
+    <div class="skill-box">
+      <h3>🛠️ Tools</h3>
+      <p>GitHub, VS Code</p>
+    </div>
+  </div>
+</div>
+
+<!-- Projects -->
+<div id="projects" class="section">
+  <h2 class="heading">My Projects</h2>
+  <div class="row">
+    <div class="project-card">
+      <h3>🤖 IOT based smart animal intrusion detection system.</h3>
+      <p>A system that detects the intrusion of animals into a designated area using IoT sensors.</p>
+      <p><b>Tech:</b>Arudino uno,ESP-32,GSMmodule-800l,PIR SENSOR,LDR,SOLAR PANEL,BUZZER,BATTERY</p>
+      <a href="#" class="link">GitHub</a> | <a href="#" class="link">Live Demo</a>
+    </div>
+    <div class="project-card">
+      <h3>💼 Portfolio Website</h3>
+      <p>Responsive premium portfolio website for assessment.</p>
+      <p><b>Tech:</b> HTML, CSS, JS</p>
+      <a href="#" class="link">GitHub</a> | <a href="#" class="link">Live Demo</a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Me -->
+<div id="contact" class="contact-section">
+  <h2 class="contact-heading">Contact Me</h2>
+  
+  <form class="contact-form-center">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit" class="button">Send Message</button>
+  </form>
+</div>
+
+
+<div class="footer">
+  <h3>Connect With Me</h3>
+  <div class="footer-links">
+    <a href="mailto:shobit02.gupta@gmail.com">📧 Email</a>
+    <a href="https://www.linkedin.com/in/shobit-gupta-6a8961244" target="_blank">🔗 LinkedIn</a>
+    <a href="https://github.com/you" target="_blank">💻 GitHub</a>
+  </div>
+  <p class="copyright">© my Portfolio.</p>
+</div>
+
+
+</body>
+</html>
